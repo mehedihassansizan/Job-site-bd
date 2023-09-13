@@ -1,0 +1,15 @@
+.btn {
+  border-radius: 8px;
+  background: var(--Linear, linear-gradient(90deg, #7e90fe 0%, #9873ff 100%));
+  padding: 19px 28px;
+  color: white;
+  font-weight: bold;
+}
+#padding-nav{
+  padding-left: 32px;
+}
+.active{
+  color: #9873FF;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}

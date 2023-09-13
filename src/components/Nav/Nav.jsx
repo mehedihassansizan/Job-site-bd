@@ -6,8 +6,8 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="md:mx-[100px] pt-8">
-      <div className="md:grid grid-cols-3">
+    <nav className="mx-[100px] pt-8">
+      <div className="grid grid-cols-3">
         <div>
           <h1 className="text-[32px] font-bold">JobSiteBD</h1>
         </div>

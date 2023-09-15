@@ -13,7 +13,7 @@ const Nav = () => {
         </div>
         <div className="flex self-center text-[gray]">
           <NavLink
-            to="/home"
+            to="/"
             className={({ isActive, isPending }) =>
               isActive ? "active" : isPending ? "pending" : ""
             }

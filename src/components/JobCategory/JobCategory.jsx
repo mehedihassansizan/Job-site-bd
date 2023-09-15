@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import './JobCategory.css'
 import img1 from '../Icons/accounts 1.png'
 import img2 from '../Icons/business 1.png'
 import img3 from '../Icons/social-media 1.png'
 import img4 from '../Icons/chip 1.png'
+import { jobsContext } from '../Home/Home';
 
 const JobCategory = () => {
     return (

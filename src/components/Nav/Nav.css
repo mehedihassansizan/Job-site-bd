@@ -1,7 +1,7 @@
 .btn {
   border-radius: 8px;
   background: var(--Linear, linear-gradient(90deg, #7e90fe 0%, #9873ff 100%));
-  padding: 19px 28px;
+  padding: 10px 28px;
   color: white;
   font-weight: bold;
 }

@@ -2,12 +2,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Nav from "../Nav/Nav";
-import "./Main.css";
+
 
 const Main = () => {
   return (
     <div>
-      <Nav></Nav>
+      <div className="nav-container">
+        <Nav></Nav>
+      </div>
       <Outlet></Outlet>
     </div>
   );

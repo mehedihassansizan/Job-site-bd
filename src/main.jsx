@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -9,15 +10,17 @@ import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Applied_Jobs from './components/Applied_Jobs/Applied_Jobs';
 import Blog from './components/Blog/Blog';
+import Main from './components/Layout/Main';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element : <Home></Home>,
+    element : <Main></Main>,
     children: [
       {
-        path: 'home',
-        element: <Home></Home>
+        path: '/',
+        element: <Home></Home>,
+        loader : () => fetch('job_data.json')
       },
       {
         path: 'statistics',

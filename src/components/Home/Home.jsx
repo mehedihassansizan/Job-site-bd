@@ -6,13 +6,19 @@ import Nav from "../Nav/Nav";
 import JobCategory from "../JobCategory/JobCategory";
 import { useLoaderData } from "react-router-dom";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
+import {addToDb} from "../Utilities/fakedb";
 
 export const jobsContext = createContext();
 
 const Home = () => {
   const jobData = useLoaderData();
-  const [jobs, setjobs] = useState(jobData);
+  const [jobs] = useState(jobData);
   // console.log(jobData);
+
+  const setInDataBase = (id) =>{
+    addToDb(id);
+  }
+  
   return (
     <div>
       <jobsContext.Provider value={jobs}>
@@ -28,7 +34,7 @@ const Home = () => {
         </div>
         <div className="mx-[100px] object-fill grid grid-cols-2">
           {
-            jobs.map(job => <FeaturedJobs key={job.id} job={job}></FeaturedJobs>)
+            jobData.map(job => <FeaturedJobs key={job.id} setInDataBase={setInDataBase} job={job}></FeaturedJobs>)
           }
         </div>
       </jobsContext.Provider>

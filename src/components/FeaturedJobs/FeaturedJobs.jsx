@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import { faDollar} from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
-const FeaturedJobs = ({ job }) => {
-  console.log(job);
+
+const FeaturedJobs = ({job, setInDataBase}) => {
+  // console.log(job);
+  
   const { id, title, location, brand_name, salary, jobType1, jobType2, img } =
     job;
   return (
@@ -26,7 +29,7 @@ const FeaturedJobs = ({ job }) => {
         <h1 className="pr-4 text-gray-400"> <FontAwesomeIcon icon={faLocationDot} /> {location}</h1>
         <h1 className="text-gray-400"><FontAwesomeIcon icon={faDollar} />Salary: {salary}</h1>
       </div>
-      <button className="btn mt-[35px] flex  items-end">View Details</button>
+      <Link to={`/${id}`}><button onClick={() => setInDataBase(id)} className="btn mt-[35px] flex  items-end">View Details</button></Link>
     </div>
   );
 };

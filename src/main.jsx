@@ -9,9 +9,10 @@ import {
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Applied_Jobs from './components/Applied_Jobs/Applied_Jobs';
-import Blog from './components/Blog/Blog';
+import Blog from './components/Blogs/Blogs';
 import Main from './components/Layout/Main';
 import JobDetails from './components/JobDetails/JobDetails';
+import { JobData } from './components/Utilities/appliedjob';
 
 const router = createBrowserRouter([
   {
@@ -30,15 +31,18 @@ const router = createBrowserRouter([
       },
       {
         path: 'statistics',
-        element: <Statistics></Statistics>
+        element: <Statistics></Statistics>,
+        loader: () => fetch('rechart.json')
       },
       {
         path: 'applied_jobs',
-        element: <Applied_Jobs></Applied_Jobs>
+        element: <Applied_Jobs></Applied_Jobs>,
+        loader : JobData
       },
       {
         path: 'blog',
-        element: <Blog></Blog>
+        element: <Blog></Blog>,
+        loader: () => fetch('blog.json')
       },
       {
         path: '*',

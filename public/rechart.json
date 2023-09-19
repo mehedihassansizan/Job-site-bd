@@ -1,0 +1,27 @@
+[
+    {
+      "value": 100,
+      "name": "Assignment 1",
+      "fill": "#8884d8"
+    },
+    {
+      "value": 80,
+      "name": "Assignment 2",
+      "fill": "#83a6ed"
+    },
+    {
+      "value": 50,
+      "name": "Assignment 3",
+      "fill": "#8dd1e1"
+    },
+    {
+      "value": 40,
+      "name": "Assignment 4",
+      "fill": "#82ca9d"
+    },
+    {
+      "value": 26,
+      "name": "Assignment 5",
+      "fill": "#a4de6c"
+    }
+]

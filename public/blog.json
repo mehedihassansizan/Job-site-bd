@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "img": "../src/components/All_images/google-1-1 1.png",
+      "ques":"When i use Context Api?",
+      "description" : "Overall, Context API provides a flexible and efficient way to manage state data across your application, and it can be particularly useful for managing global data that needs to be shared between multiple components"
+    },
+    {
+      "id": 2,
+      "img": "../src/components/All_images/Group 10021.png",
+      "ques":"what is custom hooks in react?",
+      "description" : "Custom Hooks are a mechanism to reuse stateful logic (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated."
+      
+    },
+    {
+      "id": 3,
+      "img": "../src/components/All_images/netflix-4 1.png",
+      "ques":"what is use ref or use usememo in react?",
+      "description" : "The useRef hook can create a mutable reference to an element or value that persists across component renders. The useMemo hook can optimize performance by memoizing the result of a computationally expensive function, and the useCallback hook can memoize a function to optimize the performance of a component"
+    }
+]

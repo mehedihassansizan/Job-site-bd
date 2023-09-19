@@ -6,7 +6,7 @@ import Nav from "../Nav/Nav";
 import JobCategory from "../JobCategory/JobCategory";
 import { useLoaderData } from "react-router-dom";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
-import {addToDb} from "../Utilities/fakedb";
+import {addToLocalStorage} from "../Utilities/fakedb";
 
 export const jobsContext = createContext();
 
@@ -16,7 +16,7 @@ const Home = () => {
   // console.log(jobData);
 
   const setInDataBase = (id) =>{
-    addToDb(id);
+    addToLocalStorage(id);
   }
   
   return (

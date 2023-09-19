@@ -1,12 +1,8 @@
 // use local storage to manage cart data
-const addToDb = id => {
+const addToLocalStorage = id => {
     localStorage.setItem('jobId', JSON.stringify(id));
 }
 
-
-
 export {
-    addToDb,
-    
-    
+    addToLocalStorage,
 }

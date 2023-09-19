@@ -12,7 +12,9 @@ const Main = () => {
         <Nav></Nav>
       </div>
       <Outlet></Outlet>
-      <Footer></Footer>
+      <div>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };

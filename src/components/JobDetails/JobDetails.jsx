@@ -1,24 +1,48 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollar, faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import { faSuitcase} from '@fortawesome/free-solid-svg-icons'
 import { faPhone} from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { addToDb, getShoppingCart } from "../Utilities/Database";
 
 
 const JobDetails = () => {
   const jobData = useLoaderData();
-  const [job, setjob] = useState(jobData);
+  const [job] = useState(jobData);
   // console.log(job);
+  const [apply, setApply] = useState([])
+
 
   const theJob = localStorage.getItem("jobId");
   const numberId = parseInt(theJob);
   const oneJob = job.find((j) => j.id === numberId);
-  console.log(oneJob);
 
-  const { id, description, responsibility, requirement, experience, salary, title, phone, email, address} = oneJob;
+  const none = () => {
+    const btn = document.getElementById('apply-btn').style.display = 'none'
+  }
+
+  const setInFakeDb = (job) =>{
+    // console.log(product);
+    // const newCart = [...carts, product];
+    let newJob = [];
+    const exist = apply.find((j) => j.id === job.id);
+    if (!exist) {
+      job.quantity = 1;
+      newJob = [...apply, job];
+    } else {
+      exist.quantity += 1;
+      const remaining = apply.filter((j) => j.id !== job.id);
+      newJob = [...remaining, exist];
+    }
+    setApply(newJob);
+    addToDb(job.id);
+    none();
+  }
+
+  const { description, responsibility, requirement, experience, salary, title, phone, email, address} = oneJob;
 
   return (
     <div>
@@ -48,7 +72,7 @@ const JobDetails = () => {
         </div>
       </div>
         <div className="grid ">
-          <button className="justify-self-end btn mr-[200px] mt-4">Apply Now</button>
+          <button onClick={() => setInFakeDb(oneJob)} id="apply-btn" className="justify-self-end btn mr-[200px] mt-4">Apply Now</button>
         </div>
     </div>
   );

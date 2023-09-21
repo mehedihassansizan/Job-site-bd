@@ -7,7 +7,7 @@ const Statistics = () => {
   const assign = useLoaderData();
   console.log(assign);
   return (
-    <div className="mt-12 grid justify-center">
+    <div className="mt-12 grid md:justify-center mt-40">
       <FunnelChart width={730} height={250}>
         <Tooltip />
         <Funnel dataKey="value" data={assign} isAnimationActive>

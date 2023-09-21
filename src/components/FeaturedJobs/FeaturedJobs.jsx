@@ -29,7 +29,7 @@ const FeaturedJobs = ({job, setInDataBase}) => {
         <h1 className="pr-4 text-gray-400"> <FontAwesomeIcon icon={faLocationDot} /> {location}</h1>
         <h1 className="text-gray-400"><FontAwesomeIcon icon={faDollar} />Salary: {salary}</h1>
       </div>
-      <Link to={`/${id}`}><button onClick={() => setInDataBase(id)} className="btn mt-[35px] flex  items-end">View Details</button></Link>
+      <Link to={`/${id}`}><button onClick={() => setInDataBase(id)} className="btn p-4 mt-[35px] flex  items-end">View Details</button></Link>
     </div>
   );
 };

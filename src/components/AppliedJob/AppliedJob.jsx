@@ -43,7 +43,7 @@ const AppliedJob = ({ applyJob }) => {
           </div>
         </div>
         <div className="grid self-center ml-[430px] w-[157px] h-10">
-            <Link to={`/${id}`}><button className="btn">View Details</button></Link>
+            <Link to={`/${id}`}><button className="btn p-4">View Details</button></Link>
         </div>
       </div>
     </div>
